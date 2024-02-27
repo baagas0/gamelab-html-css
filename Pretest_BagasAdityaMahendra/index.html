@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="table.css">
+    <title>Pretest Gamelab Bagas Aditya Mahendra</title>
+</head>
+
+<body>
+    <h2>Form Rekam Medis</h2>
+    <form class="my-form" id="form">
+        <div class="container">
+            <ul>
+                <li>
+                    <div class="grid grid-1">
+                        <input type="text" name="id_pasien" placeholder="ID Pasien" required>
+                    </div>
+                </li>
+                <li>
+                    <div class="grid grid-2">
+                        <div>
+                            <label for="nama">Nama</label>
+                            <input type="text" name="nama" placeholder="Nama" required>
+                        </div>
+                        <div>
+                            <label for="penyakit">Penyakit</label>
+                            <input type="text" name="penyakit" placeholder="Penyakit" required>
+                        </div>
+                    </div>
+                </li>
+                <li>
+                    <label for="alamat">Alamat</label>
+                    <textarea name="alamat" placeholder="Alamat" required></textarea>
+                </li>
+
+                <li>
+                    <label for="bpjs">BPJS</label>
+                    <select name="bpjs">
+                        <!-- <option selected>-- Please choose an option --</option> -->
+                        <option selected>Tidak Menggunakan</option>
+                        <option>Kelas I</option>
+                        <option>Kelas II</option>
+                        <option>Kelas III</option>
+                    </select>
+                </li>
+                <li>
+                    <div class="grid grid-2">
+                        <div>
+                            <label for="tgl_masuk">Tanggal masuk</label>
+                            <input type="date" name="tgl_masuk" placeholder="Tanggal Masuk" required>
+                        </div>
+                        <div>
+                            <label for="tgl_keluar">Tanggal keluar</label>
+                            <input type="date" name="tgl_keluar" placeholder="Tanggal Keluar">
+                        </div>
+                    </div>
+                </li>
+                
+                <li>
+                    <div class="grid grid-3">
+                        <!-- <div class="required-msg">REQUIRED FIELDS</div> -->
+                        <button class="btn-grid" type="submit">
+                            <span class="back">
+                                <img src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/162656/email-icon.svg" alt="">
+                            </span>
+                            <span class="front" id="label_button">SUBMIT</span>
+                        </button>
+                        <button class="btn-grid" type="reset">
+                            <span class="back">
+                                <img src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/162656/eraser-icon.svg" alt="">
+                            </span>
+                            <span class="front">RESET</span>
+                        </button>
+                        <button class="btn-grid" id="delete" type="button" disabled>
+                            <span class="back">
+                                <img src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/162656/eraser-icon.svg" alt="">
+                            </span>
+                            <span class="front">HAPUS</span>
+                        </button>
+                    </div>
+                </li>
+            </ul>
+        </div>
+    </form>
+
+    <h2>Table Rekam Medis</h2>
+    <div class="table-wrapper">
+        <table class="fl-table">
+            <thead>
+                <tr>
+                    <th>ID Pasien</th>
+                    <th>Nama</th>
+                    <th>Penyakit</th>
+                    <th>Alamat</th>
+                    <th>BPJS</th>
+                    <th>Tanggal Masuk</th>
+                    <th>Tanggal Keluar</th>
+                </tr>
+            </thead>
+            <tbody id="tbody">
+                
+            <tbody>
+        </table>
+    </div>
+</body>
+
+</html>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js" integrity="sha512-v2CJ7UaYy4JwqLDIrZUI/4hqeoQieOmAZNXBeQyjo21dadnwR+8ZaIJVT8EE2iyI61OV8e6M8PP2/4hpQINQ/g==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+<script src="script.js"></script>

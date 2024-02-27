@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <!-- <link rel="stylesheet" href="style.css"> -->
+  <style>
+    body {
+        background-color: rgb(35, 50, 116);
+    }
+    .content {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+    h1, td {
+      color: #fff
+    }
+</style>
+</head>
+
+<body>
+  <center>
+    <h1><ins>FORMULIR PENDAFTARAN</ins></h1>
+
+    <video width="320" height="170" controls>
+      <source src="vidio.mp4" type="video/mp4">
+    </video>
+    <br><br>
+
+    <canvas id="Mycanvas" width="300" height="200" style="border: 1px solid #000000"> </canvas>
+
+    <br>
+
+    <form action="">
+      <table>
+        <tr>
+          <td>Nama Lengkap</td>
+          <td>:</td>
+          <td><input type="text"></td>
+        </tr>
+        <tr>
+          <td>Tempat Lahir</td>
+          <td>:</td>
+          <td><input type="text"></td>
+        </tr>
+        <tr>
+          <td>Tanggal Lahir</td>
+          <td>:</td>
+          <td><input type="date"></td>
+        </tr>
+        <tr>
+          <td>Jenis Kelamin</td>
+          <td>:</td>
+          <td><input type="radio" name="Jkelamin">Laki-Laki
+            <input type="radio" name="Jkelamin">Perempuan
+          </td>
+        </tr>
+        <tr>
+          <td>Alamat</td>
+          <td>:</td>
+          <td><textarea name="alamat" id="alamat" cols="27" rows="4"></textarea></td>
+        </tr>
+        <tr>
+          <td>Email</td>
+          <td>:</td>
+          <td><input type="text" name="email"></td>
+        </tr>
+        <tr>
+          <td>No.HP</td>
+          <td>:</td>
+          <td><input type="text" name="NoHP"></td>
+        </tr>
+        <tr>
+          <td>Kota</td>
+          <td>:</td>
+          <td><select name="kota" id="kota">
+              <option value="" selected>**Pilih Kota**</option>
+              <option value="Pekanbaru">Pekanbaru</option>
+              <option value="Medan">Medan</option>
+              <option value="Dumai">Dumai</option>
+              <option value="Jakarta">Jakarta</option>
+              <option value="Bandung">Bandung</option>
+              <option value="Yogyakarta">Yogyakarta</option>
+            </select></td>
+        </tr>
+        <tr>
+          <td><input type="submit" value="Simpan"> <input type="submit" value="Batal"></td>
+          <td></td>
+        </tr>
+      </table>
+    </form>
+
+
+    <script>
+      var c = document.getElementById('Mycanvas');
+      var ctx = c.getContext('2d');
+      var grd = ctx.createLinearGradient(0, 0, 250, 0);
+      grd.addColorStop(0, 'orange');
+      grd.addColorStop(1, 'yellow');
+      ctx.fillStyle = grd;
+      ctx.fillRect(10, 10, 280, 180);
+      ctx.font = '30px Text New Roman';
+      ctx.strokeText('Educa Studio', 85, 100);
+    </script>
+  </center>
+</body>
+
+</html>
