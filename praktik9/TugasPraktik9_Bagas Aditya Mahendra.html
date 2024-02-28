@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contoh Browser Object Model</title>
+    <style>
+        .paragraf {
+            margin: 10px 0;
+            transition: background-color 1s;
+        }
+        body {
+            background-color: rgb(35, 50, 116);
+            /* width: 100%;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center; */
+        }
+        h1, p {
+            color: #fff;
+        }
+    </style>
+</head>
+<body>
+    <h1>Contoh Browser Object Model Javascript</h1>
+    <p class="paragraf" id="paragraf1">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Blanditiis repellat labore possimus non eaque, sint necessitatibus nesciunt, ducimus, placeat ad molestiae mollitia fuga officiis nulla minima tempora reiciendis pariatur aliquam.</p>
+    <p class="paragraf" id="paragraf2">Lorem ipsum dolor sit amet consectetur adipisicing elit. Repudiandae possimus rem repellat provident tenetur qui minima beatae consectetur cumque explicabo, delectus corrupti quibusdam nam veritatis iste ullam dignissimos pariatur temporibus.</p>
+    <p class="paragraf" id="paragraf3">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Perferendis, maxime non, possimus laudantium consequuntur incidunt cum numquam tenetur corrupti facere qui repellat dignissimos quisquam asperiores minus, aspernatur aperiam voluptas dolor.</p>
+
+    <script>
+        const paragraf1 = document.getElementById('paragraf1');
+        const paragraf2 = document.getElementById('paragraf2');
+        const paragraf3 = document.getElementById('paragraf3');
+
+        function kedipWarna() {
+            paragraf1.style.color = 'white';
+            setTimeout(() => {
+                paragraf1.style.color = 'red';
+            }, 1000);
+
+            paragraf2.style.color = 'white';
+            setTimeout(() => {
+                paragraf2.style.color = 'blue';
+            }, 1000);
+
+            paragraf3.style.color = 'white';
+            setTimeout(() => {
+                paragraf3.style.color = 'green';
+            }, 1000);
+        }
+
+        setInterval(kedipWarna, 2000);
+    </script>
+</body>
+</html>
