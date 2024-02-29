@@ -1,0 +1,43 @@
+<html>
+
+<head>
+    <title>Error Handling GAMELAB</title>
+</head>
+
+<body>
+    <h1>Buka Inspec Elemen -> Console</h1>
+</body>
+
+</html>
+<script>
+    // Debug menggunakan console.log
+    // Untuk mencetak nilai variable dalam console browser
+    const myVariable = "hello gamelab";
+    console.log(`[Normal] ${myVariable}`);
+    console.error(`[Error] ${myVariable}`)
+</script>
+<script>
+    // Debug menggunakan blok statement try catch
+    // Jika tidak error maka seluruh logic dalam blok try akan dijalankan
+    // Sistem akan mengembalikan nilai yang error dalam blok catch
+    // Blok finally akan dijalankan apabila ada atau tidak ada error
+    try {
+        const myVariable2 = "hello variable";
+        console.log(myNonExistentVariable);
+    } catch (error) {
+        console.error("Terjadi error:", error.message);
+    } finally {
+        console.log('Tes try catch selesai')
+    }
+</script>
+<script>
+    // Debug menggunakan debugger
+    // debugger digunakan untuk menunda proses  script dan membuka konsol developer browser
+    // dengan debugger ini sangat memungkinkan untuk kita untuk menampilkan visual dari variable 
+    console.log('Start tes debugger')
+    const myArray = [1, 2, 3];
+    for (let i = 0; i < myArray.length; i++) {
+        debugger; // proses akan dihentikan disini
+        console.log(`debugger: ${myArray[i]}`);
+    }
+</script>
